@@ -1,0 +1,10 @@
+@import "tailwindcss";
+body {
+    overflow: hidden;
+  }
+  pre {
+    user-select: text;
+  }
+  * {
+    user-select: none;
+  }
