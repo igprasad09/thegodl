@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg10() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`# initial empty stack
+stack = []
+# append() function to push
+# element in the stack
+stack.append('1')
+stack.append('2')
+stack.append('3')
+ print(stack)
+ # pop() function to pop
+# element from stack in
+# LIFO order
+print('\nElements poped from my_stack:')
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+#print(stack.pop())
+print('\nmy_stack after elements are poped:')
+print(stack) `);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +58,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg10

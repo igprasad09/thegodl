@@ -1,23 +1,30 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg13() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`# importing re library
+import re
+p=input("Enter your password:")
+x=True
+while x:
+ if(len(p)<6 or len(p)>20):
+ break
+elif not re.search("[a-z]",p):
+ break
+elif not re.search("[A-Z]",p):
+ break
+elif not re.search("[0-9]",p):
+ break
+elif not re.search("[$#@]",p):
+ break
+elif re.search("\s",p):
+ break
+ else:
+print("Valid Password")
+ x=False
+ break
+if x:
+print("Invalid Password")`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +63,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg13

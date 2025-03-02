@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg18() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`try:
+ num1=int(input("Enter the numerator:"))
+ num2=int(input("Enter the denominator:"))
+ result=num1/num2
+ print("Result:",result)
+except ValueError:
+print("Invalid input")
+except ZeroDivisionError:
+print("Cannot divide by zero")
+else:
+print("No exception occur")
+finally:
+print("End of program")`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +53,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg18

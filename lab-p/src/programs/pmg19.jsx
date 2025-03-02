@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg19() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`import matplotlib.pyplot as plt
+# Data
+x = [2, 3, 4, 6, 8]
+y = [2, 3, 4, 6, 8]
+# Plot the line chart
+plt.subplot(121)
+plt.plot(x, y, color='tab:red')
+# Add labels and title
+plt.title('Line Chart')
+plt.xlabel('X axis label')
+plt.ylabel('Y axis label')
+# Show the plot
+plt.subplot(122)
+plt.title('Bar Chart')
+plt.xlabel('X axis label')
+plt.ylabel('Y axis label')
+plt.bar(x, y)
+plt.show()`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +58,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg19

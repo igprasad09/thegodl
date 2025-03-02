@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg9() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`# Initialize an empty list
+array = []
+print("Enter the limit")
+n=int(input())
+for i in range(n):
+ element = int(input("Enter the Element: "))
+array.append(element)
+for i in range(n-1):
+ min = i
+ for j in range(i+1, n):
+ if array[min] > array[j]:
+ min = j
+ if min != i:
+ temp = array[i]
+ array[i] = array[min]
+ array[min] = temp
+print("The Sorted array in ascending order:", end='\n')
+for i in range(n):
+ print(array[i])`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +59,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg9

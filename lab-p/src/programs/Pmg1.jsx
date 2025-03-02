@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg1() {
-
-  const [data,setData] = useState(`def insertionSort(array):
-
-    for step in range(1, len(array)):
-        key = array[step]
-        j = step - 1
-        
-        # Compare key with each element on the left of it until an element smaller than it is found
-        # For descending order, change key<array[j] to key>array[j].        
-        while j >= 0 and key < array[j]:
-            array[j + 1] = array[j]
-            j = j - 1
-        
-        # Place key at after the element just smaller than it.
-        array[j + 1] = key
-
-
-data = [9, 5, 1, 4, 3]
-insertionSort(data)
-print('Sorted Array in Ascending Order:')
-print(data) 
-prasad`);
+function Pmg1(props) {
+  console.log(props.pgmnum)
+  const [data,setData] = useState(`n=int(input("Enter the number: "))
+c=0
+a=1
+b=1
+if n==0 or n==1:
+print("Yes the number belongs to Fibonacci series")
+else:
+ while c<n:
+ c=a+b
+ b=a
+ a=c
+ if c==n:
+ print("Yes,the number belongs to Fibonacci series")
+ else:
+print("No, the number not belongs to Fibonacci series")`);
   
    const handleCopy = async()=>{
        try{
@@ -47,7 +41,7 @@ prasad`);
      <div className='w-300 h-120 bg-white mt-5'>
 
      <div class="relative h-full w-full overflow-hidden overflow-y-scroll bg-slate-950">
-     <pre className="select-text ml-5  text-white font-bold" >
+     <pre className="select-text ml-5 mt-4  text-white font-bold" >
      {data}
 </pre>
 

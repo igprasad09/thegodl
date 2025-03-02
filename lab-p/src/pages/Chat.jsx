@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://test-22or.onrender.com");
 
 function About() {
   // States

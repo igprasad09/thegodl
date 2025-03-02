@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg6() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`def lin_search(list1,n,key):
+ for i in range(0,n):
+ if(list1[i]==key):
+ return i
+ return -1
+n=int(input("Enter the size"))
+list1=input("Enter the numbers:").split()
+list1=[int(x)for x in list1]
+key=int(input("Enter the key Element to be searched"))
+n=len(list1)
+res=lin_search(list1,n,key)
+if(res==-1):
+print("Element not found")
+else:
+print("Element found at index:",res)`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +55,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg6

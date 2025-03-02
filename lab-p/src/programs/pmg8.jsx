@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg8() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`str1=input("Enter the first string:")
+str2=input("Enter the second string:")
+print("conversion of uppercase of",str1,"is",str1.upper())
+print("conversion of lowercase of",str2,"is",str2.lower())
+print("swapcase of string",str1,"is",str1.swapcase())
+print("title-case-of string",str1,"is",str1.title())
+print("string replacement of first string",str1,"is",str1.replace(str1,str2))
+string="python is awesome"
+capitalized_string=string.capitalize()
+print("\n old string ",string)
+print("capitalized string",capitalized_string)
+name="bcacollegenidasoshi"
+if name.isalpha()==True:
+print("All characters are alphabets")
+else:
+print("All characters are not alphabets")
+print("Maximum is",max(1,2,3,4))
+num=[1,3,2,8,5,10,6]
+print("Maximum number is:",max(num))
+teststring="python"
+print("Length of",teststring,"is",len(teststring))`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +61,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg8

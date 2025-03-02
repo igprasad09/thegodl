@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg17() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`import tkinter as tk
+from tkinter import messagebox
+#function to handle button click event
+def show_message():
+messagebox.showinfo("Hello","welcome to the GUI")
+#create the main window
+window=tk.Tk()
+window.title("My GUI")
+window.geometry("300x200")
+#create label widget
+label=tk.Label(window,text="Hello,world")
+label.pack()
+#create a button widget
+button=tk.Button(window,text="click me",command=show_message)
+button.pack()
+#start the main event loop
+window.mainloop()`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +57,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg17

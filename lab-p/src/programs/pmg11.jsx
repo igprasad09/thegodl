@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg11() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`#open a file for writing
+file=open("E:\klcF.txt","w")
+#write some text to the file
+file.write("Welcome to BCA Department\n")
+L = ['This is BCA College \n', 'Place is Nidasoshi \n', 'Fourth semester \n']
+file.writelines(L)
+#close the file
+file.close()
+#open the file for reading
+file=open("E:\klcF.txt","r")
+#read the contents of the file into a string variable
+file_cont=file.read()
+#print the contents of the file
+print(file_cont)`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +54,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg11

@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg15() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`#deomstrate Dictionary
+person={"name":"Amit","age":"21","city":"Bangaluru","occupation":"student"}
+#access values in the dictionary
+print(person["name"])
+print(person["age"])
+print(person["city"])
+print(person["occupation"])
+#modify values in the dictionary
+person["age"]=25
+person["occupation"]="Engineer"
+print(person)
+#add a new key-value pair to the dictionary
+person["country"]="India"
+print(person)
+#remove a key-value pair from dictonary
+del person["city"]
+print(person)
+#check if key-value exist in the dictionary
+if "occupation" in person:
+print("occupation:",person["occupation"])`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +60,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg15

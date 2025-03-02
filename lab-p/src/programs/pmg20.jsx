@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg20() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`import matplotlib.pyplot as plt
+import numpy as np
+#Generate some random data
+data=np.random.randint(0,100,100)
+#create histogram
+plt.subplot(121)
+plt.hist(data,bins=20)
+plt.title("Histogram of random data")
+plt.xlabel("value")
+plt.ylabel("frequency")
+#sample data
+sizes=[30,25,20,15,10]
+labels=['A','B','C','D','E']
+#create pie chart
+plt.subplot(122)
+plt.pie(sizes,labels=labels)
+plt.title("PIE CHART")
+plt.show()`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +58,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg20

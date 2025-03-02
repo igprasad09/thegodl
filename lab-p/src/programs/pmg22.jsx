@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg22() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`import pandas as pd
+#Read data from excel sheets in an Excel file
+data = pd.read_excel('file.xlsx', sheet_name='kavita')
+print("\n**Displaying Data from DataFrames**\n")
+print(data)
+print("\n**OPERATIONS ON DATAFRAMES**\n")
+print("\n1.View the first few rows of the DataFrame :")
+print(data.head())
+print("\n2.Number of rows and columns in the DataFrame :",end="")
+print(data.shape)
+print("\n3.Filtered data(Age column<25) :")
+filtered_data =data[data['Age'] < 25]
+print(filtered_data)
+print("\n4.Sort DataFrame based on 'Age' col in ascending order :")
+sorted_data = data.sort_values(by='Age', ascending=True)
+print(sorted_data)
+print("\nProgram Closed...")`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +57,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg22

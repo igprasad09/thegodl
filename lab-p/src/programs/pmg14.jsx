@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg14() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`print("PROGRAM FOR BUILT-IN METHODS OF LIST\n ");
+demonstrate List
+numbers=[1,2,13,40,5]
+print(numbers)
+sum_of_numbers=sum(numbers)
+print("Sum=",sum_of_numbers)
+max_number=max(numbers)
+print("Max=",max_number)
+min_number=min(numbers)
+print("Min=",min_number)
+numbers.sort()
+print("sorted numbers in ascending",numbers)
+numbers.reverse()
+print("sorted numbers in descending",numbers)
+numbers.append(6)
+print("Updated numbers",numbers)
+numbers.remove(13)
+print("Removed",numbers)
+numbers.clear()
+print("List after clear",numbers)`);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +60,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg14

@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react'
 
-function Pmg2() {
+function Pmg21() {
   console.log()
-  const [data,setData] = useState(`#import complex math module
-import cmath
-print("Enter the value of a")
-a=float(input())
-print("Enter the value of b")
-b=float(input())
-print("Enter the value of c")
-c=float(input())
-#calculate the discriminant
-d=(b**2)-(4*a*c)
-#find the solution
-soln1=(-b-cmath.sqrt(d))/(2*a)
-soln2=(-b+cmath.sqrt(d))/(2*a)
-#print("The solution are")
-print("solution1=",soln1)
-print("solution2=",soln2)`);
+  const [data,setData] = useState(`import numpy as np
+# Initializing our array
+array1 = np.arange(9, dtype = np.float64).reshape(3, 3)
+#array1 = np.arange(9, dtype = np.float64)
+print('First Array:')
+print(array1)
+print('Second array:')
+array2 = np.arange(11,20, dtype = np.float_).reshape(3, 3)
+#array2 = np.arange(11,20, dtype = np.int_)
+print(array2)
+print('\nAdding two arrays:')
+print(np.add(array1, array2))
+print('\nSubtracting two arrays:')
+print(np.subtract(array1, array2))
+print('\nMultiplying two arrays:')
+print(np.multiply(array1, array2))
+print('\nDividing two arrays:')
+print(np.divide(array1, array2)) `);
   
    const handleCopy = async()=>{
        try{
@@ -56,4 +58,4 @@ print("solution2=",soln2)`);
   )
 }
 
-export default Pmg2
+export default Pmg21
